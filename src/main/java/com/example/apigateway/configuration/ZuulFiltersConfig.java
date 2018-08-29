@@ -17,11 +17,10 @@ public class ZuulFiltersConfig {
         return new EnrichmentFilter();
     }
 
-	/* Decomment this for make it works into openshift*/
-	/*
+	/* Decomment this Bean for make it works into openshift*/
+	
     @Bean
     public UniRestSimpleHostRoutingFilter simpleHostRoutingFilter(ProxyRequestHelper proxyRequestHelper, ZuulProperties zuulProperties) {
         return new UniRestSimpleHostRoutingFilter(proxyRequestHelper,zuulProperties,null);
     }
-	*/
 }

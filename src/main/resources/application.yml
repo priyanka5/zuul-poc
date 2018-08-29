@@ -2,8 +2,8 @@ zuul:
   routes:
     users:
       path: /test/**
-      #write here the route of the called application
-      url: http://example.com/rest-service/greeting
+      #write here the route of the called Rest API, GET /greeting is the URL.
+      url: http://example.com/greeting
 
 
 logging:
