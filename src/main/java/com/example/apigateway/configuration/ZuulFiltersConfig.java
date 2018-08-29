@@ -17,9 +17,10 @@ public class ZuulFiltersConfig {
         return new EnrichmentFilter();
     }
 
+	/*
     @Bean
     public UniRestSimpleHostRoutingFilter simpleHostRoutingFilter(ProxyRequestHelper proxyRequestHelper, ZuulProperties zuulProperties) {
         return new UniRestSimpleHostRoutingFilter(proxyRequestHelper,zuulProperties,null);
     }
-
+	*/
 }
