@@ -4,6 +4,7 @@ zuul:
       path: /test/**
       #write here the route of the called Rest API, GET /greeting is the URL.
       url: http://example.com/greeting
+      serviceId: myusers-service
 
 
 logging:
@@ -12,3 +13,11 @@ logging:
       springframework:
         cloud:
           netflix: trace
+myusers-service:
+  ribbon:
+    NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
+    ListOfServers: http://example1.com,http://example2.com
+    ConnectTimeout: 1000
+    ReadTimeout: 3000
+    MaxTotalHttpConnections: 500
+    MaxConnectionsPerHost: 100 
